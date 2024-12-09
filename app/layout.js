@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Keep Up",
-  description: "Trying NextJs",
+  title: "Fetch Posts",
+  description: "Fetching posts from the JsonPlaceholder API",
 };
 
 export default function RootLayout({ children }) {
@@ -25,9 +25,15 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav className="mb-5 flex gap-[4rem] bg-teal-500 items-center justify-center text-3xl">
-          <Link href={`/`}><button>Home</button></Link>
-          <Link href={`/posts`}><button>Posts</button></Link>
-          <Link href={`/articles`}><button>Articles</button></Link>
+          <Link href={`/`}>
+            <button>Home</button>
+          </Link>
+          <Link href={`/posts`}>
+            <button>Posts</button>
+          </Link>
+          <Link href={`/articles`}>
+            <button>Articles</button>
+          </Link>
         </nav>
         {children}
       </body>
